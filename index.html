@@ -15,6 +15,51 @@
     <!-- <meta property="og:image" content="http://www.tuningdrones.com/assets/preview.png" /> -->
     <!-- <meta property="og:url" content="http://www.tuningdrones.com/" /> -->
     <!-- <meta property="og:title" content="tuningDRONES" /> -->
+    <script language="JavaScript">
+
+        /* 
+        C4 = 60
+        C3 = 72
+        */
+        function chordPlay(){
+            play("tenor");
+            play("lead");
+            play("bari");
+            play("bass");
+        }
+
+        function chordStop(){
+            stop("tenor");
+            stop("lead");
+            stop("bari");
+            stop("bass");
+        }
+           
+        function chordDown(){
+             document.getElementById('pitch-tenor').selectedIndex += 1;
+             document.getElementById('pitch-lead').selectedIndex  += 1;
+             document.getElementById('pitch-bari').selectedIndex  += 1;
+             document.getElementById('pitch-bass').selectedIndex  += 1;
+        }
+        function chordUp(){
+             document.getElementById('pitch-tenor').selectedIndex -= 1;
+             document.getElementById('pitch-lead').selectedIndex  -= 1;
+             document.getElementById('pitch-bari').selectedIndex  -= 1;
+             document.getElementById('pitch-bass').selectedIndex  -= 1;
+        }
+
+        function chordMajor(){
+             document.getElementById('pitch-tenor').selectedIndex = 60;
+             document.getElementById('pitch-lead').selectedIndex = 72 - 7;
+             document.getElementById('pitch-bari').selectedIndex = 72 - 4;
+             document.getElementById('pitch-bass').selectedIndex = 72;
+             document.getElementById('cents-tenor').value = -0;
+             document.getElementById('cents-lead').value = +2;
+             document.getElementById('cents-bari').value = -14;
+             document.getElementById('cents-bass').value = 0;
+        }
+
+     </script>
 </head>
 <body>
 	<aside id="config">
@@ -1228,7 +1273,12 @@
             </select>
             <button id="playpause-bass" class="paused"/>
 		</ul>
-
+        <button id="chord" onClick="chordPlay()">Chord Play</button>
+        <button id="chord" onClick="chordStop()">Chord Stop</button>
+        <button id="chord" onClick="chordDown()">Chord Step Down</button>
+        <button id="chord" onClick="chordUp()">Chord Step Up</button>
+        <ul></ul>
+        <button id="chord" onClick="chordMajor()">Major</button>
 	</main>
 </body>
 </html>

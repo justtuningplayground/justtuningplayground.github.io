@@ -64,6 +64,11 @@ document.addEventListener("DOMContentLoaded", function(e) {
 	document.getElementById('playpause-bari').addEventListener('click', togglePlayBari);
 	document.getElementById('playpause-bass').addEventListener('click', togglePlayBass);
 
+	document.getElementById('playpause-tenor').addEventListener('change', changeCentsTenor);
+	document.getElementById('playpause-lead').addEventListener('change', changeCentsLead);
+	document.getElementById('playpause-bari').addEventListener('change', changeCentsBari);
+	document.getElementById('playpause-bass').addEventListener('change', changeCentsBass);
+
     document.getElementById('cents-tenor').addEventListener('change', changeCentsTenor);
     document.getElementById('cents-lead').addEventListener('change', changeCentsLead);
     document.getElementById('cents-bari').addEventListener('change', changeCentsBari);
