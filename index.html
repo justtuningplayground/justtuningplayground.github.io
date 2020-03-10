@@ -48,7 +48,7 @@
              document.getElementById('pitch-bass').selectedIndex  -= 1;
         }
 
-        function chordMajor(){
+        function chordMajor1351(){
              document.getElementById('pitch-tenor').selectedIndex = 60;
              document.getElementById('pitch-lead').selectedIndex = 72 - 7;
              document.getElementById('pitch-bari').selectedIndex = 72 - 4;
@@ -57,6 +57,50 @@
              document.getElementById('cents-lead').value = +2;
              document.getElementById('cents-bari').value = -14;
              document.getElementById('cents-bass').value = 0;
+        }
+
+        function chordMajor1513(){
+             document.getElementById('pitch-tenor').selectedIndex = 60 - 4;
+             document.getElementById('pitch-lead').selectedIndex = 60;
+             document.getElementById('pitch-bari').selectedIndex = 72 - 7;
+             document.getElementById('pitch-bass').selectedIndex = 72;
+             document.getElementById('cents-tenor').value = -14;
+             document.getElementById('cents-lead').value = 0;
+             document.getElementById('cents-bari').value = +2;
+             document.getElementById('cents-bass').value = 0;
+        }
+
+        function chordMajor1135(){
+             document.getElementById('pitch-tenor').selectedIndex = 60 - 7;
+             document.getElementById('pitch-lead').selectedIndex = 60 - 4;
+             document.getElementById('pitch-bari').selectedIndex = 60;
+             document.getElementById('pitch-bass').selectedIndex = 72;
+             document.getElementById('cents-tenor').value = +2;
+             document.getElementById('cents-lead').value = -14;
+             document.getElementById('cents-bari').value = 0;
+             document.getElementById('cents-bass').value = 0;
+        }
+
+        function dom7_1357(){
+             document.getElementById('pitch-tenor').selectedIndex = 60 - 10;
+             document.getElementById('pitch-lead').selectedIndex = 60 - 7;
+             document.getElementById('pitch-bari').selectedIndex = 60 - 4;
+             document.getElementById('pitch-bass').selectedIndex = 60;
+             document.getElementById('cents-tenor').value = -31;
+             document.getElementById('cents-lead').value  = +2;
+             document.getElementById('cents-bari').value  = -14;
+             document.getElementById('cents-bass').value  = 0;
+        }
+
+        function dom7_5371(){
+             document.getElementById('pitch-tenor').selectedIndex = 48;
+             document.getElementById('pitch-lead').selectedIndex = 60 - 10;
+             document.getElementById('pitch-bari').selectedIndex = 60 - 4;
+             document.getElementById('pitch-bass').selectedIndex = 72 - 7;
+             document.getElementById('cents-tenor').value = 0;
+             document.getElementById('cents-lead').value  = -31;
+             document.getElementById('cents-bari').value  = -14;
+             document.getElementById('cents-bass').value  = +2;
         }
 
      </script>
@@ -1278,7 +1322,12 @@
         <button id="chord" onClick="chordDown()">Chord Step Down</button>
         <button id="chord" onClick="chordUp()">Chord Step Up</button>
         <ul></ul>
-        <button id="chord" onClick="chordMajor()">Major</button>
+        <button id="chord" onClick="chordMajor1351()">Major 1351</button>
+        <button id="chord" onClick="chordMajor1513()">Major 1513</button>
+        <button id="chord" onClick="chordMajor1135()">Major 1135</button>
+        <ul></ul>
+        <button id="chord" onClick="dom7_1357()">Barber7 1357</button>
+        <button id="chord" onClick="dom7_5371()">Barber7 5371</button>
 	</main>
 </body>
 </html>
