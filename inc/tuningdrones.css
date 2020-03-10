@@ -205,7 +205,7 @@ body {
     body main #settings {
       margin: 0px;
       padding: 0px;
-      background: #000;
+      background: #fff;
       overflow: hidden;
       text-align: center;
       font-size: 0px; }
@@ -362,7 +362,7 @@ body {
           padding: 10px;
           margin-top: 10px;
           box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.5); }
-          body main button:after {
+          body main ul button:after {
             content: "Play";
             display: inline;
             padding-left: 10px;
@@ -396,6 +396,14 @@ body {
           body main button #playIcon {
             margin: 0px; } }
       body main button.playing #playIcon:after {
+        border: none;
+        width: 45px;
+        height: 45px;
+        background: #FFF;
+        margin-top: 7.5px;
+        margin-left: 0px; }
+      body main button #chord {
+        content: "Test";
         border: none;
         width: 45px;
         height: 45px;
